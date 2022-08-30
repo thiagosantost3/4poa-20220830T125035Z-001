@@ -7,7 +7,7 @@ public class SenhaValidaRegEx {
     
     public boolean ehSenhaValida(String senha) {
 
-        String expressao = "^(?:[1-9]\\d{1,3}|\\d)(?:[.,]\\d)?$";
+        String expressao = "[a-zA-Z][a-zA-Z0-9]{5}";
         Pattern pattern = Pattern.compile( expressao);
         Matcher matcher = pattern.matcher( senha);
         return matcher.matches();
